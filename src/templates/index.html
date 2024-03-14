@@ -1,0 +1,17 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Start VM</title>
+    <script>
+    async function startVM() {
+        const response = await fetch("/start-vm", {method: "POST"});
+        const data = await response.json();
+        alert(data.detail);
+    }
+    </script>
+</head>
+<body>
+    <button onclick="startVM()">Start VM</button>
+</body>
+</html>
